@@ -8,7 +8,7 @@ using Rhino.Geometry;
 
 namespace Raven
 {
-    public class RavenComponent : GH_Component
+    public class GHC_RhinoVersion : GH_Component
     {
         /// <summary>
         /// Each implementation of GH_Component must provide a public 
@@ -17,7 +17,7 @@ namespace Raven
         /// Subcategory the panel. If you use non-existing tab or panel names, 
         /// new tabs/panels will automatically be created.
         /// </summary>
-        public RavenComponent()
+        public GHC_RhinoVersion()
           : base("Rhino Version", "Version",
             "Gets the version of the current Rhino installation.",
             "Params", "Raven")
