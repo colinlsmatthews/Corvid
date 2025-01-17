@@ -5,6 +5,7 @@ using Grasshopper.Kernel;
 using Rhino;
 using Rhino.Geometry;
 using Rhino.DocObjects.Tables;
+using System.Linq;
 
 namespace Raven
 {
@@ -18,7 +19,7 @@ namespace Raven
               "Get the value for a user text key/value pair by section name. " +
                 "\nUser text key/value pairs can be grouped into sections " +
                 "\nwith the format \"<section>\\<entry>:<value>\".",
-              "Category", "Subcategory")
+              "Rhino", "Raven")
         {
         }
 
@@ -57,19 +58,20 @@ namespace Raven
             if (!DA.GetData(0, ref section)) return;
             if (!DA.GetDataList<string>(1, entries))
             {
+                var entriesArray = userData.GetEntryNames(section).ToArray();
+                for (int i = 0; i < entriesArray.Length; i++)
+                {
+                    keys.Add(entriesArray[i]);
+                    values.Add(userData.GetValue(section, entries[i]));
+                }
+            }
+            else
+            {
                 var entriesArray = entries.ToArray();
                 foreach(string entry in entriesArray)
                 {
                     keys.Add(entry);
                     values.Add(userData.GetValue(section, entry));
-                }
-            }
-            else
-            {
-                for (int i = 0; i < entries.Count; i++)
-                {
-                    keys.Add(entries[i]);
-                    values.Add(userData.GetValue(section, entries[i]));
                 }
             }
 
@@ -96,6 +98,11 @@ namespace Raven
         public override Guid ComponentGuid
         {
             get { return new Guid("98157918-5709-4C8F-8C99-14DD44A5FE59"); }
+        }
+
+        public override GH_Exposure Exposure
+        {
+            get { return GH_Exposure.secondary; }
         }
     }
 }
