@@ -15,7 +15,7 @@ namespace Raven
         public GHC_RhinoLicenseInfo()
           : base("Rhino License Info", "License",
               "Get information about the current active license for Rhino",
-              "Params", "Raven")
+              "Rhino", "Raven")
         {
         }
 

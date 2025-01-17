@@ -16,7 +16,7 @@ namespace Raven
         public GHC_RhinoFileInfo()
           : base("Rhino File Info", "File Info",
               "Get information about the currently opened Rhino file.",
-              "Params", "Raven")
+              "Rhino", "Raven")
         {
         }
 

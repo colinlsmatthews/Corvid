@@ -20,7 +20,7 @@ namespace Raven
         public GHC_RhinoVersion()
           : base("Rhino Version", "Version",
             "Gets the version of the current Rhino installation.",
-            "Params", "Raven")
+            "Rhino", "Raven")
         {
         }
 

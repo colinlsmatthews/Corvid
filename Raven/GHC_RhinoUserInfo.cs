@@ -15,7 +15,7 @@ namespace Raven
         public GHC_RhinoUserInfo()
           : base("Rhino User Info", "User Info",
               "Gets info for the current user",
-              "Params", "Raven")
+              "Rhino", "Raven")
         {
         }
 
