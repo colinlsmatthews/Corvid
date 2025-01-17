@@ -14,7 +14,7 @@ namespace Raven
         /// Initializes a new instance of the UserTxtKeyValueGet class.
         /// </summary>
         public GHC_UserTxtKeyValueGet()
-          : base("Set User Text Value by Key", "TxtKV",
+          : base("Get User Text Value by Key", "TxtKV",
               "Get the value for a user text key/value pair.",
               "Rhino", "Raven")
         {
@@ -72,6 +72,11 @@ namespace Raven
         public override Guid ComponentGuid
         {
             get { return new Guid("CA3C7872-AAD8-4D1B-B7DC-9ABC22DF8A8D"); }
+        }
+
+        public override GH_Exposure Exposure
+        {
+            get { return GH_Exposure.secondary; }
         }
     }
 }

@@ -96,5 +96,10 @@ namespace Raven
         {
             get { return new Guid("1BB0602C-3AAE-422E-BF87-389E8D0A6B53"); }
         }
+
+        public override GH_Exposure Exposure
+        {
+            get { return GH_Exposure.secondary; }
+        }
     }
 }
