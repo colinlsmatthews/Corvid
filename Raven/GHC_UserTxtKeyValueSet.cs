@@ -8,13 +8,13 @@ using Rhino.DocObjects.Tables;
 
 namespace Raven
 {
-    public class GHC_SetUserTxtKeyValue : GH_Component
+    public class GHC_UserTxtKeyValueSet : GH_Component
     {
         /// <summary>
         /// Initializes a new instance of the GHC_SetUserTxtSection class.
         /// </summary>
-        public GHC_SetUserTxtKeyValue()
-          : base("Set User Text By Key/Value", "UserTxtKV",
+        public GHC_UserTxtKeyValueSet()
+          : base("Set User Text By Key/Value", "TxtKV",
               "Set document user text by key/value pairs.",
               "Rhino", "Raven")
         {
@@ -25,8 +25,8 @@ namespace Raven
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddTextParameter("Key", "K", "The key to set", GH_ParamAccess.item);
-            pManager.AddTextParameter("Value", "V", "The value to set", GH_ParamAccess.item);
+            pManager.AddTextParameter("Key", "K", "The key to set", GH_ParamAccess.list);
+            pManager.AddTextParameter("Value", "V", "The value to set", GH_ParamAccess.list);
             pManager.AddBooleanParameter("Set", "S", "Send to Rhino document", GH_ParamAccess.item, false);
         }
 
@@ -43,26 +43,32 @@ namespace Raven
         /// <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
         protected override void SolveInstance(IGH_DataAccess DA)
         {
-            string key = String.Empty;
-            string value = String.Empty;
+            List<string> keys = new List<string>();
+            List<string> values = new List<string>();
             bool set = false;
-            DA.GetData(0, ref key);
-            DA.GetData(1, ref value);
-            DA.GetData(2, ref set);
+            if (!DA.GetDataList<string>(0, keys)) return;
+            if (!DA.GetDataList<string>(1, values)) return;
 
-            if (!set) return;
-            if (String.IsNullOrEmpty(key) || String.IsNullOrEmpty(value))
+            if(keys.Count != values.Count)
             {
-                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "Missing one or more required inputs");
+                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Key and Value lists must be the same length.");
                 return;
             }
+
+            DA.GetData(2, ref set);
+            if (!set) return;            
 
             RhinoDoc document = RhinoDoc.ActiveDoc;
             StringTable userData = document.Strings;
 
             if (set)
             {
-                userData.SetString(key, value);
+                for(int i = 0; i < keys.Count; i++)
+                {
+                    var key = keys[i];
+                    var value = values[i];
+                    userData.SetString(key, value);
+                }
             }
         }
 
