@@ -14,8 +14,10 @@ namespace Raven
         /// Initializes a new instance of the UserTxtKeyValueGet class.
         /// </summary>
         public GHC_UserTxtKeyValueGet()
-          : base("Get User Text Value by Key", "TxtKV",
-              "Get the value for a user text key/value pair.",
+          : base("Get User Text Value by Key", "UsrTxtKV",
+              "Get the value for a user text key/value pair.\n" +
+                "\nIf you would like to keep this component synced" +
+                "\nwith the Rhino document, use a trigger.",
               "Rhino", "Raven")
         {
         }

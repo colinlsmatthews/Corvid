@@ -14,7 +14,7 @@ namespace Raven
         /// Initializes a new instance of the GHC_SetUserTxtSection class.
         /// </summary>
         public GHC_UserTxtKeyValueSet()
-          : base("Set User Text By Key/Value", "TxtKV",
+          : base("Set User Text By Key/Value", "UsrTxtKV",
               "Set document user text by key/value pairs.",
               "Rhino", "Raven")
         {

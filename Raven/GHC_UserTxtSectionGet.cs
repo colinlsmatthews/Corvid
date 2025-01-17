@@ -15,10 +15,13 @@ namespace Raven
         /// Initializes a new instance of the GHC_UserTextSectionGet class.
         /// </summary>
         public GHC_UserTxtSectionGet()
-          : base("Get User Text Value by Section", "TxtSec",
-              "Get the value for a user text key/value pair by section name. " +
+          : base("Get User Text Value by Section", "UsrTxtSec",
+              "Get the value for a user text key/value pair by section name," +
+                "\nwith an optional entry filter. " +
                 "\nUser text key/value pairs can be grouped into sections " +
-                "\nwith the format \"<section>\\<entry>:<value>\".",
+                "\nwith the format \"<section>\\<entry>:<value>\".\n" +
+                "\nIf you would like to keep this component synced" +
+                "\nwith the Rhino document, use a trigger.",
               "Rhino", "Raven")
         {
         }
@@ -38,8 +41,9 @@ namespace Raven
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddTextParameter("Keys", "K", "The keys for the section entries", GH_ParamAccess.list);
-            pManager.AddTextParameter("Values", "V", "The values for the section entries", GH_ParamAccess.list);
+            pManager.AddTextParameter("Keys", "K", "The keys for the section", GH_ParamAccess.list);
+            pManager.AddTextParameter("Entries", "E", "The entries for the section", GH_ParamAccess.list);
+            pManager.AddTextParameter("Values", "V", "The values for the section", GH_ParamAccess.list);
         }
 
         /// <summary>
@@ -52,8 +56,9 @@ namespace Raven
             StringTable userData = document.Strings;
             string section = String.Empty;
             List<string> entries = new List<string>();
-            List<string> values = new List<string>();
             List<string> keys = new List<string>();
+            List<string> entriesOut = new List<string>();
+            List<string> values = new List<string>();
 
             if (!DA.GetData(0, ref section)) return;
             if (!DA.GetDataList<string>(1, entries))
@@ -61,8 +66,9 @@ namespace Raven
                 var entriesArray = userData.GetEntryNames(section).ToArray();
                 for (int i = 0; i < entriesArray.Length; i++)
                 {
-                    keys.Add(entriesArray[i]);
-                    values.Add(userData.GetValue(section, entries[i]));
+                    keys.Add(section + "\\" + entriesArray[i]);
+                    entriesOut.Add(entriesArray[i]);
+                    values.Add(userData.GetValue(section, entriesArray[i]));
                 }
             }
             else
@@ -70,13 +76,15 @@ namespace Raven
                 var entriesArray = entries.ToArray();
                 foreach(string entry in entriesArray)
                 {
-                    keys.Add(entry);
+                    keys.Add(section + "\\" + entry);
+                    entriesOut.Add(entry);
                     values.Add(userData.GetValue(section, entry));
                 }
             }
 
             DA.SetDataList(0, keys);
-            DA.SetDataList(1, values);
+            DA.SetDataList(1, entriesOut);
+            DA.SetDataList(2, values);
         }
 
         /// <summary>

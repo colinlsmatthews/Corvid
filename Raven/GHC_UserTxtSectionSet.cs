@@ -14,7 +14,7 @@ namespace Raven
         /// Initializes a new instance of the GHC_SetUserTxtSection class.
         /// </summary>
         public GHC_UserTxtSectionSet()
-          : base("Set User Text By Section", "TxtSec",
+          : base("Set User Text By Section", "UsrTxtSec",
               "Set document user text by section, entry, and value." +
                 "\nUser text key/value pairs can be grouped into sections" +
                 "\nwith the format \"<section>\\<entry>:<value>\".",
