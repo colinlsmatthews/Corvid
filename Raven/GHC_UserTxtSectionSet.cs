@@ -8,13 +8,13 @@ using Rhino.DocObjects.Tables;
 
 namespace Raven
 {
-    public class GHC_SetUserTxtSection : GH_Component
+    public class GHC_UserTxtSectionSet : GH_Component
     {
         /// <summary>
         /// Initializes a new instance of the GHC_SetUserTxtSection class.
         /// </summary>
-        public GHC_SetUserTxtSection()
-          : base("Set User Text By Section", "UserTxtSec",
+        public GHC_UserTxtSectionSet()
+          : base("Set User Text By Section", "TxtSec",
               "Set document user text by section, entry, and value." +
                 "\nUser text key/value pairs can be grouped into sections" +
                 "\nwith the format \"<section>\\<entry>:<value>\".",
@@ -28,8 +28,8 @@ namespace Raven
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
             pManager.AddTextParameter("Section", "S", "The section name", GH_ParamAccess.item);
-            pManager.AddTextParameter("Entry", "E", "The entry name", GH_ParamAccess.item);
-            pManager.AddTextParameter("Value", "V", "The value to set", GH_ParamAccess.item);
+            pManager.AddTextParameter("Entry", "E", "The entry name", GH_ParamAccess.list);
+            pManager.AddTextParameter("Value", "V", "The value to set", GH_ParamAccess.list);
             pManager.AddBooleanParameter("Set", "S", "Send to Rhino document", GH_ParamAccess.item, false);
         }
 
@@ -47,27 +47,32 @@ namespace Raven
         protected override void SolveInstance(IGH_DataAccess DA)
         {
             string section = String.Empty;
-            string entry = String.Empty;
-            string value = String.Empty;
+            List<string> entries = new List<string>();
+            List<string> values = new List<string>();
             bool set = false;
-            DA.GetData(0, ref section);
-            DA.GetData(1, ref entry);
-            DA.GetData(2, ref value);
+            if (!DA.GetData(0, ref section)) return;
+            if (!DA.GetDataList<string>(1, entries)) return;
+            if (!DA.GetDataList<string>(2, values)) return;
+            if (entries.Count != values.Count)
+            {
+                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Entry and Value lists must be the same length.");
+                return;
+            }
             DA.GetData(3, ref set);
 
             if (!set) return;
-            if (String.IsNullOrEmpty(section) || String.IsNullOrEmpty(entry) || String.IsNullOrEmpty(value))
-            {
-                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Warning, "Missing one or more required inputs");
-                return;
-            }
 
             RhinoDoc document = RhinoDoc.ActiveDoc;
             StringTable userData = document.Strings;
 
             if (set)
             {
-                userData.SetString(section, entry, value);
+                for (int i = 0; i < entries.Count; i++)
+                {
+                    var entry = entries[i];
+                    var value = values[i];
+                    userData.SetString(section, entry, value);
+                }
             }
         }
 
