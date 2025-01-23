@@ -6,14 +6,14 @@ using Rhino;
 using Rhino.Geometry;
 using Rhino.DocObjects.Tables;
 
-namespace Raven
+namespace Raven.Components
 {
-    public class GHC_UserTxtKeyValueSet : GH_Component
+    public class UserTxtKeyValueSet : GH_Component
     {
         /// <summary>
         /// Initializes a new instance of the GHC_SetUserTxtSection class.
         /// </summary>
-        public GHC_UserTxtKeyValueSet()
+        public UserTxtKeyValueSet()
           : base("Set User Text By Key/Value", "UsrTxtKV",
               "Set document user text by key/value pairs.",
               "Rhino", "Raven")
@@ -23,7 +23,7 @@ namespace Raven
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
-        protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
+        protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
             pManager.AddTextParameter("Key", "K", "The key to set", GH_ParamAccess.list);
             pManager.AddTextParameter("Value", "V", "The value to set", GH_ParamAccess.list);
@@ -33,7 +33,7 @@ namespace Raven
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
-        protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
+        protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
         }
 
@@ -46,24 +46,24 @@ namespace Raven
             List<string> keys = new List<string>();
             List<string> values = new List<string>();
             bool set = false;
-            if (!DA.GetDataList<string>(0, keys)) return;
-            if (!DA.GetDataList<string>(1, values)) return;
+            if (!DA.GetDataList(0, keys)) return;
+            if (!DA.GetDataList(1, values)) return;
 
-            if(keys.Count != values.Count)
+            if (keys.Count != values.Count)
             {
-                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Key and Value lists must be the same length.");
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Key and Value lists must be the same length.");
                 return;
             }
 
             DA.GetData(2, ref set);
-            if (!set) return;            
+            if (!set) return;
 
             RhinoDoc document = RhinoDoc.ActiveDoc;
             StringTable userData = document.Strings;
 
             if (set)
             {
-                for(int i = 0; i < keys.Count; i++)
+                for (int i = 0; i < keys.Count; i++)
                 {
                     var key = keys[i];
                     var value = values[i];

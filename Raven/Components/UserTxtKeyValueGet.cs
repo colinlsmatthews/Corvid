@@ -6,14 +6,14 @@ using Rhino;
 using Rhino.Geometry;
 using Rhino.DocObjects.Tables;
 
-namespace Raven
+namespace Raven.Components
 {
-    public class GHC_UserTxtKeyValueGet : GH_Component
+    public class UserTxtKeyValueGet : GH_Component
     {
         /// <summary>
         /// Initializes a new instance of the UserTxtKeyValueGet class.
         /// </summary>
-        public GHC_UserTxtKeyValueGet()
+        public UserTxtKeyValueGet()
           : base("Get User Text Value by Key", "UsrTxtKV",
               "Get the value for a user text key/value pair.\n" +
                 "\nIf you would like to keep this component synced" +
@@ -25,7 +25,7 @@ namespace Raven
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
-        protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
+        protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
             pManager.AddTextParameter("Key", "K", "The key to get", GH_ParamAccess.item);
         }
@@ -33,7 +33,7 @@ namespace Raven
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
-        protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
+        protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
             pManager.AddTextParameter("Value", "V", "The value for the key", GH_ParamAccess.item);
         }
@@ -44,7 +44,7 @@ namespace Raven
         /// <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
         protected override void SolveInstance(IGH_DataAccess DA)
         {
-            string key = String.Empty;
+            string key = string.Empty;
 
             RhinoDoc document = RhinoDoc.ActiveDoc;
             StringTable userData = document.Strings;

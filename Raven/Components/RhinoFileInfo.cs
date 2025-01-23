@@ -6,14 +6,14 @@ using Grasshopper.Kernel;
 using Rhino;
 using Rhino.Geometry;
 
-namespace Raven
+namespace Raven.Components
 {
-    public class GHC_RhinoFileInfo : GH_Component
+    public class RhinoFileInfo : GH_Component
     {
         /// <summary>
         /// Initializes a new instance of the GHC_RhinoFileInfo class.
         /// </summary>
-        public GHC_RhinoFileInfo()
+        public RhinoFileInfo()
           : base("Rhino File Info", "File Info",
               "Get information about the currently opened Rhino file.",
               "Rhino", "Raven")
@@ -23,14 +23,14 @@ namespace Raven
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
-        protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
+        protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
         }
 
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
-        protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
+        protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
             pManager.AddTextParameter("File Name", "N", "The name of the currently opened Rhino file.", GH_ParamAccess.item);
             pManager.AddTextParameter("File Path", "P", "The path of the currently opened Rhino file.", GH_ParamAccess.item);
@@ -45,7 +45,7 @@ namespace Raven
         protected override void SolveInstance(IGH_DataAccess DA)
         {
             RhinoDoc document = RhinoDoc.ActiveDoc;
-            string docName = String.Empty;
+            string docName = string.Empty;
             string path = document.Path;
             DateTime dateCreated = new DateTime(2000, 01, 01);
             DateTime dateModified = new DateTime(2000, 01, 01);
@@ -65,7 +65,7 @@ namespace Raven
                 DA.SetData(1, "Not saved yet!"); // Set warning for path
                 DA.SetData(2, "Not saved yet!"); // Set warning for date created
                 DA.SetData(3, "Not saved yet!"); // Set warning for date modified
-                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Warning,
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Warning,
                                         "This document is brand new and has not been saved yet.");
             }
 

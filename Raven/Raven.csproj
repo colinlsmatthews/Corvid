@@ -45,6 +45,10 @@
     </EmbeddedResource>
   </ItemGroup>
   
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  
   <Target Name="BuildYakPackage" AfterTargets="DispatchToInnerBuilds">
     <PropertyGroup>
       <YakExecutable Condition="$(YakExecutable) == '' and $([MSBuild]::IsOSPlatform(windows)) and Exists('C:\Program Files\Rhino 8\System\Yak.exe')">C:\Program Files\Rhino 8\System\Yak.exe</YakExecutable>

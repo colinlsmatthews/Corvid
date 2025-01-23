@@ -6,17 +6,17 @@ using Rhino;
 using Rhino.DocObjects.Tables;
 using Rhino.Geometry;
 
-namespace Raven
+namespace Raven.Components
 {
-    public class GHC_GetAllUserText : GH_Component
+    public class GetAllUserText : GH_Component
     {
         // TODO:
         // - Add refresh button (like Elefront)
-        
+
         /// <summary>
         /// Initializes a new instance of the GHC_GetAllUserText class.
         /// </summary>
-        public GHC_GetAllUserText()
+        public GetAllUserText()
           : base("Get Document User Text", "DocUsrTxt",
               "Gets all the user text from the current Rhino document" +
                 "\nand any section headings if present.",
@@ -27,14 +27,14 @@ namespace Raven
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
-        protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
+        protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
         }
 
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
-        protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
+        protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
             pManager.AddTextParameter("Keys", "K", "All Rhino document user text keys.", GH_ParamAccess.list);
             pManager.AddTextParameter("Values", "V", "All Rhino document user text values.", GH_ParamAccess.list);

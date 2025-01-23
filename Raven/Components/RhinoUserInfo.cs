@@ -5,14 +5,14 @@ using Grasshopper.Kernel;
 using Rhino;
 using Rhino.Geometry;
 
-namespace Raven
+namespace Raven.Components
 {
-    public class GHC_RhinoUserInfo : GH_Component
+    public class RhinoUserInfo : GH_Component
     {
         /// <summary>
         /// Initializes a new instance of the GHC_RhinoUserInfo class.
         /// </summary>
-        public GHC_RhinoUserInfo()
+        public RhinoUserInfo()
           : base("Rhino User Info", "User Info",
               "Gets info for the current user",
               "Rhino", "Raven")
@@ -22,14 +22,14 @@ namespace Raven
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
-        protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
+        protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
         }
 
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
-        protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
+        protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
             pManager.AddTextParameter("Full Name", "N", "The full name of the current user.", GH_ParamAccess.item);
             pManager.AddTextParameter("First Name", "F", "The first name of the current user.", GH_ParamAccess.item);
@@ -58,7 +58,7 @@ namespace Raven
         /// <summary>
         /// Provides an Icon for the component.
         /// </summary>
-        protected override System.Drawing.Bitmap Icon
+        protected override Bitmap Icon
         {
             get
             {

@@ -6,9 +6,9 @@ using Grasshopper;
 using Grasshopper.Kernel;
 using Rhino.Geometry;
 
-namespace Raven
+namespace Raven.Components
 {
-    public class GHC_RhinoVersion : GH_Component
+    public class RhinoVersion : GH_Component
     {
         /// <summary>
         /// Each implementation of GH_Component must provide a public 
@@ -17,7 +17,7 @@ namespace Raven
         /// Subcategory the panel. If you use non-existing tab or panel names, 
         /// new tabs/panels will automatically be created.
         /// </summary>
-        public GHC_RhinoVersion()
+        public RhinoVersion()
           : base("Rhino Version", "Version",
             "Gets the version of the current Rhino installation.",
             "Rhino", "Raven")
@@ -27,14 +27,14 @@ namespace Raven
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
-        protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
+        protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
         }
 
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
-        protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
+        protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
             pManager.AddTextParameter("Rhino Version", "V", "The version of the current Rhino installation.", GH_ParamAccess.item);
             pManager.AddIntegerParameter("Major Version", "M", "The major version of the current Rhino installation.", GH_ParamAccess.item);
@@ -65,7 +65,7 @@ namespace Raven
         /// You can add image files to your project resources and access them like this:
         /// return Resources.IconForThisComponent;
         /// </summary>
-        protected override System.Drawing.Bitmap Icon => null;
+        protected override Bitmap Icon => null;
 
         /// <summary>
         /// Each component must have a unique Guid to identify it. 

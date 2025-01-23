@@ -13,14 +13,14 @@ using Newtonsoft.Json.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Raven
+namespace Raven.Components
 {
-    public class GHC_GetForumAvatar : GH_Component
+    public class GetForumAvatar : GH_Component
     {
         /// <summary>
         /// Initializes a new instance of the GHC_GetForumAvatar class.
         /// </summary>
-        public GHC_GetForumAvatar()
+        public GetForumAvatar()
           : base("Forum Avatar", "Avatar",
               "Get any username avatar bitmap from the McNeel Discourse forum",
               "Rhino", "Raven")
@@ -30,14 +30,14 @@ namespace Raven
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
-        protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
+        protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
             pManager.AddTextParameter("Username", "U", "The username of the forum member", GH_ParamAccess.item);
-            pManager.AddIntegerParameter("Size", "S", 
+            pManager.AddIntegerParameter("Size", "S",
                 "The size of the avatar image:" +
                 "\n0 - S (72x72)" +
                 "\n1 - M (144x144)" +
-                "\n2 - L (288x288)", 
+                "\n2 - L (288x288)",
                 GH_ParamAccess.item);
             pManager[1].Optional = true;
         }
@@ -45,7 +45,7 @@ namespace Raven
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
-        protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
+        protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
             pManager.AddGenericParameter("Avatar", "A", "The avatar bitmap", GH_ParamAccess.item);
         }
@@ -80,7 +80,7 @@ namespace Raven
 
             string url = $"https://discourse.mcneel.com/u/{username}.json";
 
-            
+
             // Get JSON data from forum user page
             string jsonText = string.Empty;
             Task<string> jsonTask;
@@ -93,7 +93,7 @@ namespace Raven
                 }
                 catch (Exception e)
                 {
-                    this.AddRuntimeMessage(GH_RuntimeMessageLevel.Error, 
+                    AddRuntimeMessage(GH_RuntimeMessageLevel.Error,
                         $"Error downloading JSON data for user \"{username}\": \n{e.Message}");
                     return;
                 }
@@ -107,7 +107,7 @@ namespace Raven
             }
             catch (Exception e)
             {
-                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Error,
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error,
                     $"Error parsing JSON data for user \"{username}\": \n{e.Message}");
                 return;
             }
@@ -115,7 +115,7 @@ namespace Raven
             string avatarTemplate = (string)jsonRoot["user"]?["avatar_template"];
             if (string.IsNullOrEmpty(avatarTemplate))
             {
-                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Error,
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error,
                     $"Error parsing JSON data for user \"{username}\": \nNo avatar template found");
                 return;
             }
@@ -141,7 +141,7 @@ namespace Raven
                 }
                 catch (Exception e)
                 {
-                    this.AddRuntimeMessage(GH_RuntimeMessageLevel.Error,
+                    AddRuntimeMessage(GH_RuntimeMessageLevel.Error,
                         $"Error downloading avatar image for user \"{username}\": \n{e.Message}");
                     return;
                 }
@@ -158,7 +158,7 @@ namespace Raven
             }
             catch (Exception e)
             {
-                this.AddRuntimeMessage(GH_RuntimeMessageLevel.Error,
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error,
                     $"Error converting image bytes to bitmap: \n{e.Message}");
                 return;
             }
@@ -167,7 +167,7 @@ namespace Raven
         /// <summary>
         /// Provides an Icon for the component.
         /// </summary>
-        protected override System.Drawing.Bitmap Icon
+        protected override Bitmap Icon
         {
             get
             {

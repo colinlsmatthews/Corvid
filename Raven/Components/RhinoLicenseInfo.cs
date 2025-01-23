@@ -5,14 +5,14 @@ using Grasshopper.Kernel;
 using Rhino;
 using Rhino.Geometry;
 
-namespace Raven
+namespace Raven.Components
 {
-    public class GHC_RhinoLicenseInfo : GH_Component
+    public class RhinoLicenseInfo : GH_Component
     {
         /// <summary>
         /// Initializes a new instance of the GHC_RhinoLicenseInfo class.
         /// </summary>
-        public GHC_RhinoLicenseInfo()
+        public RhinoLicenseInfo()
           : base("Rhino License Info", "License",
               "Get information about the current active license for Rhino",
               "Rhino", "Raven")
@@ -22,14 +22,14 @@ namespace Raven
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
-        protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
+        protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
         }
 
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
-        protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
+        protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
             pManager.AddTextParameter("License Owner", "L", "The name of the current license owner.", GH_ParamAccess.item);
             pManager.AddTextParameter("Organization", "O", "The organization of the current license owner", GH_ParamAccess.item);
