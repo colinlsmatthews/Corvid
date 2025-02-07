@@ -16,8 +16,8 @@ namespace Raven.Components
         /// </summary>
         public UserTxtSectionGet()
           : base("Get User Text Value by Section", "UsrTxtSec",
-              "Get the value for a user text key/value pair by section name," +
-                "\nwith an optional entry filter. " +
+              "Get the value for a user text key/value pair by" +
+                "\nsection name, entry name, or both. " +
                 "\nUser text key/value pairs can be grouped into sections " +
                 "\nwith the format \"<section>\\<entry>:<value>\".\n" +
                 "\nIf you would like to keep this component synced" +
@@ -33,6 +33,7 @@ namespace Raven.Components
         {
             pManager.AddTextParameter("Section", "S", "The section name", GH_ParamAccess.item);
             pManager.AddTextParameter("Entry", "E", "The entry name", GH_ParamAccess.list);
+            pManager[0].Optional = true;
             pManager[1].Optional = true;
         }
 
@@ -59,9 +60,12 @@ namespace Raven.Components
             List<string> keys = new List<string>();
             List<string> entriesOut = new List<string>();
             List<string> values = new List<string>();
+            
+            DA.GetData(0, ref section);
+            DA.GetDataList(1, entries);
 
-            if (!DA.GetData(0, ref section)) return;
-            if (!DA.GetDataList(1, entries))
+            // When user provides a section name but no entries
+            if (!string.IsNullOrEmpty(section) & entries.Count == 0)
             {
                 var entriesArray = userData.GetEntryNames(section).ToArray();
                 for (int i = 0; i < entriesArray.Length; i++)
@@ -71,15 +75,43 @@ namespace Raven.Components
                     values.Add(userData.GetValue(section, entriesArray[i]));
                 }
             }
-            else
+            // When user provides both a section name and entries
+            else if (!string.IsNullOrEmpty(section) & entries.Count > 0)
             {
                 var entriesArray = entries.ToArray();
+                var sectionEntries = userData.GetEntryNames(section).ToArray();
                 foreach (string entry in entriesArray)
                 {
-                    keys.Add(section + "\\" + entry);
-                    entriesOut.Add(entry);
-                    values.Add(userData.GetValue(section, entry));
+                    if (sectionEntries.Contains(entry))
+                    {
+                        keys.Add(section + "\\" + entry);
+                        entriesOut.Add(entry);
+                        values.Add(userData.GetValue(section, entry));
+                    }
                 }
+            }
+            // When user provides no section name and provides entries
+            else if (string.IsNullOrEmpty(section) & entries.Count > 0)
+            {
+                var sectionsArray = userData.GetSectionNames().ToArray();
+                foreach (string sec in sectionsArray)
+                {
+                    var entriesArray = entries.ToArray();
+                    var sectionEntries = userData.GetEntryNames(sec).ToArray();
+                    foreach (string entry in entriesArray)
+                    {
+                        if (sectionEntries.Contains(entry))
+                        {
+                            keys.Add(sec + "\\" + entry);
+                            entriesOut.Add(entry);
+                            values.Add(userData.GetValue(sec, entry));
+                        }
+                    }
+                }
+            }
+            else
+            {
+                return;
             }
 
             DA.SetDataList(0, keys);
