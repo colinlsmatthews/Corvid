@@ -11,7 +11,7 @@ namespace Raven.Components
     public class UserTxtSectionSet : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the GHC_SetUserTxtSection class.
+        /// Initializes a new instance of the UserTxtSectionGet class.
         /// </summary>
         public UserTxtSectionSet()
           : base("Set User Text By Section", "UsrTxtSec",

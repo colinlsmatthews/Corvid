@@ -14,7 +14,7 @@ namespace Raven.Components
         // - Add refresh button (like Elefront)
 
         /// <summary>
-        /// Initializes a new instance of the GHC_GetAllUserText class.
+        /// Initializes a new instance of the GetAllUserText class.
         /// </summary>
         public GetAllUserText()
           : base("Get Document User Text", "DocUsrTxt",

@@ -18,7 +18,7 @@ namespace Raven.Components
     public class GetForumAvatar : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the GHC_GetForumAvatar class.
+        /// Initializes a new instance of the GetForumAvatar class.
         /// </summary>
         public GetForumAvatar()
           : base("Forum Avatar", "Avatar",

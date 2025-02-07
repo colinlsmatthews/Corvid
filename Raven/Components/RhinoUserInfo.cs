@@ -10,7 +10,7 @@ namespace Raven.Components
     public class RhinoUserInfo : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the GHC_RhinoUserInfo class.
+        /// Initializes a new instance of the RhinoUserInfo class.
         /// </summary>
         public RhinoUserInfo()
           : base("Rhino User Info", "User Info",

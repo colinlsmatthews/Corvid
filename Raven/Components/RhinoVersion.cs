@@ -11,11 +11,7 @@ namespace Raven.Components
     public class RhinoVersion : GH_Component
     {
         /// <summary>
-        /// Each implementation of GH_Component must provide a public 
-        /// constructor without any arguments.
-        /// Category represents the Tab in which the component will appear, 
-        /// Subcategory the panel. If you use non-existing tab or panel names, 
-        /// new tabs/panels will automatically be created.
+        /// Initializes a new instance of the RhinoVersion class.
         /// </summary>
         public RhinoVersion()
           : base("Rhino Version", "Version",

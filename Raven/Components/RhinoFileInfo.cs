@@ -11,7 +11,7 @@ namespace Raven.Components
     public class RhinoFileInfo : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the GHC_RhinoFileInfo class.
+        /// Initializes a new instance of the RhinoFileInfo class.
         /// </summary>
         public RhinoFileInfo()
           : base("Rhino File Info", "File Info",

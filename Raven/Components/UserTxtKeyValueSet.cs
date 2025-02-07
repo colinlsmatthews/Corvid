@@ -11,7 +11,7 @@ namespace Raven.Components
     public class UserTxtKeyValueSet : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the GHC_SetUserTxtSection class.
+        /// Initializes a new instance of the UserTxtKeyValueSet class.
         /// </summary>
         public UserTxtKeyValueSet()
           : base("Set User Text By Key/Value", "UsrTxtKV",

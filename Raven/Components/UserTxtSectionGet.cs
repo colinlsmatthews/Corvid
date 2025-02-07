@@ -12,7 +12,7 @@ namespace Raven.Components
     public class UserTxtSectionGet : GH_Component
     {
         /// <summary>
-        /// Initializes a new instance of the GHC_UserTextSectionGet class.
+        /// Initializes a new instance of the UserTextSectionGet class.
         /// </summary>
         public UserTxtSectionGet()
           : base("Get User Text Value by Section", "UsrTxtSec",
