@@ -1,0 +1,67 @@
+<svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <clipPath id="a" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" d="m0 0h36v36h-36z" />
+    </clipPath>
+    <clipPath id="b" xmlns="http://www.w3.org/2000/svg">
+      <path d="m8.989 4.488h18.023v25.512h-18.023z" />
+    </clipPath>
+    <linearGradient id="c" xmlns="http://www.w3.org/2000/svg">
+      <stop offset="0" stop-color="#fff" />
+      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="d" gradientTransform="matrix(-.354 33.743 -33.743 -.354 18.698 -5.93)" gradientUnits="userSpaceOnUse" spreadMethod="pad" x1="0" x2="1" xlink:href="#c" y1="0" y2="0" xmlns="http://www.w3.org/2000/svg" />
+    <mask id="e" height="1" maskUnits="userSpaceOnUse" width="1" x="0" y="0" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#b)">
+        <path d="m8.989 4.488h18.023v25.512h-18.023z" fill="url(#d)" fill-rule="evenodd" />
+      </g>
+    </mask>
+    <clipPath id="f" xmlns="http://www.w3.org/2000/svg">
+      <path d="m4.494 4.488h16.193v4.513h-16.193z" />
+    </clipPath>
+    <linearGradient id="g" gradientTransform="matrix(0 4.537 -4.537 0 12.65 4.235)" gradientUnits="userSpaceOnUse" spreadMethod="pad" x1="0" x2="1" xlink:href="#c" y1="0" y2="0" xmlns="http://www.w3.org/2000/svg" />
+    <mask id="h" height="1" maskUnits="userSpaceOnUse" width="1" x="0" y="0" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#f)">
+        <path d="m4.494 4.488h16.193v4.513h-16.193z" fill="url(#g)" fill-rule="evenodd" />
+      </g>
+    </mask>
+    <clipPath id="i" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" d="m20.888 26.97-4.242-9.547 9.545 4.244z" />
+    </clipPath>
+    <mask id="j" height="1" maskUnits="userSpaceOnUse" width="1" x="0" y="0" xmlns="http://www.w3.org/2000/svg">
+      <image height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" width="1" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAAAAACov6uJAAAAAXNCSVQI5gpbmQAAAH5JREFUKJHtkrENAkEMBGdtSzQFojgKI4aCkBB/XgIi/q4AAjZdzWglW5fjeIVGmu+UbnU+YTFns+q5BaJj4lqV+aEmVkSshIBHx2i6vTeCMgshzUZwF0Jg9qTsAgvnRDo71ksA+He/0m1yL84usg6FVu802nV90OTo3HUV9zf9OSzOpop19gAAAABJRU5ErkJggg==" />
+    </mask>
+    <g clip-path="url(#a)" transform="matrix(1.3333333 0 0 -1.3333333 0 48)" xmlns="http://www.w3.org/2000/svg">
+      <path d="m19.507 7.5c-.002 1.653 1.34 2.995 2.993 2.995 1.652 0 2.995-1.341 2.995-2.994v-1.494h-4.089l.102-.188c.54-.8 1.455-1.325 2.492-1.325 1.658 0 3.006 1.346 3.007 3.007v22.506h-18.012v-19.506h-1.488v20.994h20.988v-23.995c-.002-2.481-2.014-4.494-4.495-4.494s-4.493 2.013-4.493 4.494zm2.993 1.507c-.832 0-1.506-.675-1.505-1.509h3.012c0 .833-.676 1.509-1.507 1.509z" />
+      <path d="m3.007 7.5c-.002 1.654 1.34 2.995 2.994 2.995h16.499v-1.488h-16.499c-.833 0-1.507-.676-1.506-1.506 0-1.661 1.347-3.007 3.005-3.007h16.499l.001-1.487-16.499-.001c-2.482 0-4.494 2.013-4.494 4.494z" />
+      <path d="m24.012 7.489c0 .836-.675 1.512-1.506 1.512-.832 0-1.506-.676-1.506-1.507z" fill="#a5a5a5" />
+      <path d="m24.006 4.488c1.659 0 3.006 1.347 3.006 3.006l-.012 22.506h-18.011l.012-19.511h13.505c1.652 0 2.994-1.342 2.994-2.995v-1.493h-4.087l.101-.187c.541-.8 1.455-1.326 2.492-1.326z" fill="#fff" />
+      <path d="m20.687 4.488-.407.494c-.485.717-.768 1.581-.768 2.512 0 .413.084.807.235 1.165l.185.342h-13.931c-.832 0-1.507-.676-1.506-1.507 0-1.659 1.347-3.006 3.005-3.006z" fill="#fff" />
+      <g mask="url(#e)">
+        <path d="m24.006 4.488c1.659 0 3.006 1.347 3.006 3.006l-.012 22.506h-18.011l.012-19.511h13.505c1.652 0 2.994-1.342 2.994-2.995v-1.493h-4.087l.101-.187c.541-.8 1.455-1.326 2.492-1.326z" fill="#c5c5c5" />
+      </g>
+      <g fill-opacity=".498039">
+        <path d="m10.5 27.007v1.488h10.5v-1.488z" />
+        <path d="m10.501 24.007v1.488h13.499v-1.488z" />
+        <path d="m10.501 21.007v1.488h4.5v-1.488z" />
+        <path d="m10.501 18.007v1.488h8.999v-1.488z" />
+        <path d="m10.5 15.007v1.488h10.5v-1.488z" />
+        <path d="m10.501 12.007v1.488h13.499v-1.488z" />
+        <path d="m18 21.007v1.488h4.5v-1.488z" />
+      </g>
+      <g mask="url(#h)">
+        <path d="m20.687 4.488-.407.494c-.485.717-.768 1.581-.768 2.512 0 .413.084.807.235 1.165l.185.342h-13.931c-.832 0-1.507-.676-1.506-1.507 0-1.659 1.347-3.006 3.005-3.006z" fill="#c5c5c5" />
+      </g>
+      <g clip-path="url(#i)">
+        <image height="1" image-rendering="optimizeSpeed" mask="url(#j)" preserveAspectRatio="none" transform="matrix(9.545 0 0 -9.547 16.646 26.97)" width="1" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABHNCSVQICAgIfAhkiAAABH9JREFUSIl1lkuP3EYShL969MzAtiRjjz7t3/MvtmFDsk467I5kq19kVb72UEV2txYiQBSbZGdUREZmMl0+/Rrg5ACSkR1ISgmHZJSUISnM5wCEQQTuThdDVWmqqCoqjFUdM8PUERHUjTr+nQEnRWJEvTvCxr1wSAAOgLtjMQK6z8BmmDFXf1xvYN8/3J2UY+Bs+O5YKGaBmdFNMRsMzdK8HqzUAzHHzAdYDkgBW8Qc/wd5exhBRMxdxyOQBqo2JNxk9NhZ1+wZkn+XWUqJlBKkIXEQu3x7XswxjTvZfN+MWcxnMWWMvDPI34LlbTOxm2JjoupTrrj7PVhtG1GLKa9RhzxTt8iA3Unnu3rfAvUZUPpgoOqIDLlUjD43YRb7/QeD3Jvg4ZhA9667v35ktOUsHqRWVWpiJDwBuUCKwFxJGLVkNqtHDDmaGK0rrcmQ0Bi7V0NUdqAhXUywQJ2NmU87PhoDHOJbFjpBRlARR1VH4aqj4nsu3Zku9a2ofQY2IiDhpBTkPAED3I1uRldFRJFus3M4rQ+GvW8dxG+M1OmmuHOfM5+2dkhOTpmURrtyH8xUld7GKWKIGCqOiE5murMyC3SaQuyW65qm6zKMlhRGyoMh88VNJhGh62Alfbs/usUAlpszbYBKt91cNcJGveJ3+QrCfcjXO7132iq0Ns7ehd5vG1Ad0g6LzxY23SjdiOnmOtv5cBw2gGIUsJnRWptnp7VO7zquV7szxiatILZZfgCoDFYRQU0R5NmSYjekYxgaQ5o2g3axmRsQCZo4Jk5Xx2QU+tamtl65SRgBNUWi5jJtnkgpSGl07sty4bIuLGtjWYQmTm+wLjqYedBXQ90xCcTAjFnYozwOh0o5VFJK1FLKQEaICMLBXVjWleW6jmIVY2lCW5W2Bq0pazN8tiJVpfeOyIiRMuScyTlTayXnPMByybjJXsgB9K5cryvX68rlcmFdO5drozdHerCusvfEJn0vdvdRsyVnai3knCml3MDcG0HALGYV53pdOZ+vLEvjfFpprbOsHZGgN2Vdhd50n9YAtWZyrpRSKCWRcyWleART7ZPymMrXdeF4OnM6XlnXldaU5SpclkZbN9uPVpTSACmlUGul1jqDQ0rDBw9gpSRKyUQErTVOpxOn04Xz+UpbhePxwrIsXJaGSBABOcPLS+FwOMyNJnIu5Jxm8EQplZyHy3OBRKHmmiFBWxt/f/2H19cv/P3lK8fjmWVZuF5XVJUweCqJehggz8/PPD094e47k/u1lAN5TuLtfjUX3J3T6cTnz595fX3l6z+Xya7z/JTJqfD0Unl+edrZpJTImfkban2awfMsn0KakyTlIKdCrYcDp+ORT58+8ddfHzkez/z3P8q7d5V3b3/g5eVlWPhwy8s2ETYDjK+v76zbqCJTz8cLv//2B+/ff+DLl5Wffnzil1/e8PbtzwOkHEiZO5fl2/hJ23i6fRjdn2Po2v68/vnhA+8/fuTlxx/498//4s2bd0OaGKbZLLzJliejbXpvQbe5eA8+3plTLAX/A3O5BBqoOlWaAAAAAElFTkSuQmCC" />
+      </g>
+      <path d="m18.532 21.667-1.886-4.244 4.242 1.887z" fill-opacity=".996078" fill-rule="evenodd" />
+      <path d="m29.9 35.982-9.012-9.012c-1.036-1.772-.626-2.07 1.061-1.062l10.091 10.092z" fill="#ffbf4f" fill-opacity=".996078" fill-rule="evenodd" />
+      <path d="m32.026 35.985-10.106-10.106c-.301-2.508.818-3.511 3.183-3.181l10.9 10.9-.033 2.4z" fill="#ff6114" fill-opacity=".996078" fill-rule="evenodd" />
+      <path d="m35.987 33.584-10.886-10.886c-1.036-1.772-.626-2.069 1.062-1.061l9.82 9.82z" fill="#bd0300" fill-opacity=".996078" fill-rule="evenodd" />
+      <path d="m28.811 35.422-7.923-8.048-4.614-10.386 10.36 4.587 8.969 8.882" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.048" />
+      <path d="m52.94 9.558-2.422 6.328h-.039c.045-.501.068-1.097.068-1.787v-4.541h-.767v7.138h1.25l2.261-5.888h.039l2.28 5.888h1.241v-7.138h-.831v4.599c0 .528.023 1.101.069 1.719h-.039l-2.442-6.318z" />
+      <path d="m61.977 9.558-.161.762h-.039c-.267-.336-.533-.563-.798-.681-.266-.119-.597-.179-.994-.179-.53 0-.946.137-1.247.41-.301.274-.452.663-.452 1.167 0 1.081.864 1.648 2.593 1.7l.908.029v.332c0 .42-.09.73-.271.93s-.47.3-.867.3c-.446 0-.95-.136-1.513-.41l-.249.62c.263.144.552.256.866.337.314.082.629.122.945.122.638 0 1.111-.141 1.418-.425.308-.283.462-.737.462-1.362v-3.652zm-1.831.571c.505 0 .901.139 1.189.415.288.277.432.664.432 1.162v.484l-.81-.034c-.645-.023-1.109-.123-1.394-.301-.285-.177-.427-.453-.427-.827 0-.293.088-.516.266-.669.177-.153.425-.23.744-.23z" />
+    </g>
+  </svg>
+</svg>

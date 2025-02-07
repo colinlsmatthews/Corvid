@@ -1,0 +1,12 @@
+<svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <clipPath id="a" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" d="m0 0h36v36h-36z" />
+    </clipPath>
+    <g clip-path="url(#a)" stroke="#000" stroke-miterlimit="10" stroke-width="1.443" transform="matrix(1.3333333 0 0 -1.3333333 0 48)" xmlns="http://www.w3.org/2000/svg">
+      <path d="m5.163 32.279h25.722c.673 0 1.393-.79 1.393-1.463v-25.419c0-.761-.791-1.676-1.552-1.676h-2.206l-1.434 1.503h-15.85l-1.503-1.503h-2.872l-3.14 3.158v23.73c0 .735.707 1.67 1.442 1.67z" fill="#fff" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="m9.733 32.278v-12.024h16.533v12.024" fill="none" stroke-opacity=".996078" />
+      <path d="m9.732 13.328v-9.607h15.031v9.814c0 .315-.312.707-.627.707h-13.766c-.372 0-.638-.543-.638-.914z" fill="#fff" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </svg>
+</svg>
