@@ -1,0 +1,12 @@
+<svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <clipPath id="a" xmlns="http://www.w3.org/2000/svg">
+      <path clip-rule="evenodd" d="m0 0h36v36h-36z" />
+    </clipPath>
+    <g clip-path="url(#a)" transform="matrix(1.3333333 0 0 -1.3333333 0 48)" xmlns="http://www.w3.org/2000/svg">
+      <path d="m33.011 28.503v4.508h-4.507v1.489h5.996v-5.997z" />
+      <path d="m1.499 1.499v5.997h1.489v-4.508h4.508v-1.489z" />
+      <path d="m24.689 6.722c-.054.052-.11.11-.16.166-.22.216-.516.336-.822.336h-1.528c-.382 0-.696.312-.696.698v.796c0 .642-.514 1.16-1.16 1.16h-.828c-.384 0-.694.312-.694.698v.832c0 .638-.518 1.16-1.158 1.16h-.798c-.386 0-.696.308-.696.692v1.292c-3.362-1.15-7.08-.02-9.238 2.802-2.156 2.816-2.278 6.7-.294 9.648 1.98 2.948 5.624 4.3 9.052 3.364 3.424-.938 5.87-3.958 6.074-7.504.074-1.262-.144-2.53-.634-3.696 2.67-2.674 5.34-5.348 8.012-8.024 1.218-1.222 1.218-3.204-.002-4.424-1.224-1.224-3.206-1.218-4.43.004zm-12.692 16.7c.894.596 1.132 1.808.534 2.7-.594.896-1.804 1.14-2.7.542s-1.136-1.808-.542-2.702c.6-.896 1.81-1.136 2.708-.54z" style="fill:#ffc400;fill-rule:evenodd;stroke:#000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
+    </g>
+  </svg>
+</svg>
