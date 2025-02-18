@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c5c5c5;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-6, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        mask: url(#mask);
+      }
+
+      .cls-8 {
+        fill: none;
+      }
+
+      .cls-9 {
+        fill: rgba(255, 255, 255, .5);
+      }
+
+      .cls-10 {
+        opacity: .28;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-11 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-8" x="7.9" y="3.16" width="22.04" height="30.49"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-104.4" y1="119.21" x2="-103.34" y2="119.21" gradientTransform="translate(-4485.45 1601.69) rotate(111.68) scale(30.2 -30.2)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="mask" x="7.9" y="3.16" width="31.73" height="41.99" maskUnits="userSpaceOnUse">
+      <g id="d">
+        <g class="cls-11">
+          <path class="cls-4" d="M7.9,3.16h22.04v30.49H7.9V3.16Z"/>
+        </g>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient-2" x1="24.5" y1="43.56" x2="24.5" y2="4.45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset=".26" stop-color="#003"/>
+      <stop offset=".38" stop-color="#100052"/>
+      <stop offset=".58" stop-color="#290083"/>
+      <stop offset=".76" stop-color="#3c00a6"/>
+      <stop offset=".91" stop-color="#4700bc"/>
+      <stop offset="1" stop-color="#4c00c4"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <g class="cls-7">
+      <g class="cls-10">
+        <path class="cls-1" d="M10.25,4.51v40.65h29.38l-.06-32.1-8.4-8.56H10.25Z"/>
+      </g>
+    </g>
+    <rect class="cls-8" x=".1" y="0" width="48" height="48"/>
+    <path class="cls-2" d="M9.23,3.37v41.26h30.4l-.07-32.58L30.88,3.37H9.23Z"/>
+    <path d="M8.16,45.71V2.3h23.17s9.32,9.31,9.32,9.31l.07,34.1H8.16ZM38.56,43.56l-.06-31.05-8.06-8.06H10.31v39.11h28.25Z"/>
+    <path class="cls-9" d="M11.38,42V6h18v1.98H13.37v34.02h-1.98Z"/>
+    <polygon points="8.22 45.71 8.22 2.3 31.39 2.29 40.71 11.61 40.78 45.71 8.22 45.71"/>
+    <polygon class="cls-5" points="38.62 43.56 38.56 12.51 30.5 4.45 10.37 4.45 10.37 43.56 38.62 43.56"/>
+    <path class="cls-3" d="M38.31,12l-7.01-7.01v7.01h7.01Z"/>
+    <path d="M10.25,43.53v-2.15h26.07V15.3h-4.35v-2.15h6.51v30.38H10.25Z"/>
+  </g>
+  <g id="text">
+    <g>
+      <rect class="cls-8" x="14.59" y="9.99" width="22.25" height="26.45"/>
+      <path class="cls-6" d="M22.89,29.42c-.01-.42-.02-.74-.02-.95,0-1.24.18-2.31.53-3.22.26-.68.67-1.37,1.25-2.06.42-.5,1.18-1.24,2.28-2.21s1.81-1.74,2.14-2.31.49-1.2.49-1.88c0-1.23-.48-2.31-1.44-3.24s-2.14-1.4-3.53-1.4-2.47.42-3.38,1.27-1.49,2.16-1.78,3.96l-3.25-.39c.29-2.4,1.16-4.24,2.61-5.52s3.36-1.92,5.74-1.92c2.52,0,4.53.69,6.03,2.06s2.25,3.03,2.25,4.97c0,1.12-.26,2.16-.79,3.11s-1.56,2.1-3.09,3.46c-1.03.91-1.71,1.59-2.02,2.02s-.55.93-.7,1.49-.24,1.48-.26,2.74h-3.04ZM22.7,35.77v-3.6h3.6v3.6h-3.6Z"/>
+    </g>
+    <path d="M29.39,13.99V3.37h1.98v8.64h7.07l1.22,1.98h-10.28Z"/>
+  </g>
+</svg>
