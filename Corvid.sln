@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raven", "Raven\Raven.csproj", "{F76F8946-8AD2-41B5-AAB8-AB21B6B70DEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corvid", "Corvid\Corvid.csproj", "{DD3AB019-FD69-49E2-97D2-BF2F59DC1AE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F76F8946-8AD2-41B5-AAB8-AB21B6B70DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F76F8946-8AD2-41B5-AAB8-AB21B6B70DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F76F8946-8AD2-41B5-AAB8-AB21B6B70DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F76F8946-8AD2-41B5-AAB8-AB21B6B70DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD3AB019-FD69-49E2-97D2-BF2F59DC1AE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3AB019-FD69-49E2-97D2-BF2F59DC1AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3AB019-FD69-49E2-97D2-BF2F59DC1AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3AB019-FD69-49E2-97D2-BF2F59DC1AE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
