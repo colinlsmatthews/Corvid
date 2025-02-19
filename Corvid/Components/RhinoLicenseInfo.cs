@@ -5,7 +5,7 @@ using Grasshopper.Kernel;
 using Rhino;
 using Rhino.Geometry;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
     public class RhinoLicenseInfo : GH_Component
     {
@@ -15,7 +15,7 @@ namespace Raven.Components
         public RhinoLicenseInfo()
           : base("Rhino License Info", "License",
               "Get information about the current active license for Rhino",
-              "Rhino", "Raven")
+              "Rhino", "Corvid")
         {
         }
 

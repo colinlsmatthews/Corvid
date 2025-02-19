@@ -6,7 +6,7 @@ using Grasshopper.Kernel;
 using Rhino;
 using Rhino.Geometry;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
     public class RhinoFileInfo : GH_Component
     {
@@ -16,7 +16,7 @@ namespace Raven.Components
         public RhinoFileInfo()
           : base("Rhino File Info", "File Info",
               "Get information about the currently opened Rhino file.",
-              "Rhino", "Raven")
+              "Rhino", "Corvid")
         {
         }
 

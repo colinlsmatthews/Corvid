@@ -2,7 +2,6 @@
 	
   <PropertyGroup>
     <!-- Select the framework(s) you wish to target.
-        Rhino 6: net45
         Rhino 7: net48
         Rhino 8 Windows: net48, net7.0, net7.0-windows, net7.0-windows10.0.22000.0, etc
         Rhino 8 Mac: net7.0, net7.0-macos, net7.0-macos12.0, etc
@@ -15,10 +14,10 @@
   
   <PropertyGroup>
     <!-- Specifies information for Assembly and Yak -->
-    <Version>1.0</Version>
-    <Title>Raven</Title>
-    <Company>Raven Authors</Company>
-    <Description>Description of Raven</Description>
+    <Version>1.0.0</Version>
+    <Title>Corvid</Title>
+    <Company>CLSM</Company>
+    <Description>Corvid is a for record-keeping</Description>
   </PropertyGroup>
   
   <ItemGroup>

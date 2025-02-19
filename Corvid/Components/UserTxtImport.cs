@@ -6,7 +6,7 @@ using Grasshopper.Kernel;
 using Rhino.Geometry;
 using Rhino.DocObjects.Tables;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
     public class UserTxtImport : GH_Component
     {
@@ -16,7 +16,7 @@ namespace Raven.Components
         public UserTxtImport()
           : base("Import Document User Text", "Import",
               "Import document user text from a .csv or .txt file",
-              "Rhino", "Raven")
+              "Rhino", "Corvid")
         {
         }
 

@@ -5,7 +5,7 @@ using Grasshopper.Kernel;
 using Rhino;
 using Rhino.Geometry;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
     public class RhinoUserInfo : GH_Component
     {
@@ -15,7 +15,7 @@ namespace Raven.Components
         public RhinoUserInfo()
           : base("Rhino User Info", "User Info",
               "Gets info for the current user",
-              "Rhino", "Raven")
+              "Rhino", "Corvid")
         {
         }
 

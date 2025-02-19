@@ -7,7 +7,7 @@ using Rhino.Geometry;
 using Rhino.DocObjects.Tables;
 using System.Linq;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
     public class UserTxtSectionGet : GH_Component
     {
@@ -22,7 +22,7 @@ namespace Raven.Components
                 "\nwith the format \"<section>\\<entry>:<value>\".\n" +
                 "\nIf you would like to keep this component synced" +
                 "\nwith the Rhino document, use a trigger.",
-              "Rhino", "Raven")
+              "Rhino", "Corvid")
         {
         }
 

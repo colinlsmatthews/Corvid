@@ -1,26 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using Eto.Forms;
+
 using Grasshopper.Kernel;
 using Rhino;
-using Rhino.DocObjects.Tables;
 using Rhino.Geometry;
+using Rhino.DocObjects.Tables;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
-    public class GetAllUserText : GH_Component
+    public class UserTxtKeyValueSet : GH_Component
     {
-        // TODO:
-        // - Add refresh button (like Elefront)
-
         /// <summary>
-        /// Initializes a new instance of the GetAllUserText class.
+        /// Initializes a new instance of the UserTxtKeyValueSet class.
         /// </summary>
-        public GetAllUserText()
-          : base("Get Document User Text", "DocUsrTxt",
-              "Gets all the user text from the current Rhino document" +
-                "\nand any section headings if present.",
-              "Rhino", "Raven")
+        public UserTxtKeyValueSet()
+          : base("Set User Text By Key/Value", "UsrTxtKV",
+              "Set document user text by key/value pairs.",
+              "Rhino", "Corvid")
         {
         }
 
@@ -29,6 +25,9 @@ namespace Raven.Components
         /// </summary>
         protected override void RegisterInputParams(GH_InputParamManager pManager)
         {
+            pManager.AddTextParameter("Key", "K", "The key to set", GH_ParamAccess.list);
+            pManager.AddTextParameter("Value", "V", "The value to set", GH_ParamAccess.list);
+            pManager.AddBooleanParameter("Set", "S", "Send to Rhino document", GH_ParamAccess.item, false);
         }
 
         /// <summary>
@@ -36,10 +35,6 @@ namespace Raven.Components
         /// </summary>
         protected override void RegisterOutputParams(GH_OutputParamManager pManager)
         {
-            pManager.AddTextParameter("Keys", "K", "All Rhino document user text keys.", GH_ParamAccess.list);
-            pManager.AddTextParameter("Values", "V", "All Rhino document user text values.", GH_ParamAccess.list);
-            pManager.AddTextParameter("Sections", "S", "All Rhino document user text section headings.", GH_ParamAccess.list);
-
         }
 
         /// <summary>
@@ -48,30 +43,33 @@ namespace Raven.Components
         /// <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
         protected override void SolveInstance(IGH_DataAccess DA)
         {
-            RhinoDoc document = RhinoDoc.ActiveDoc;
-            StringTable userText = document.Strings;
             List<string> keys = new List<string>();
             List<string> values = new List<string>();
-            List<string> sections = new List<string>();
+            bool set = false;
+            if (!DA.GetDataList(0, keys)) return;
+            if (!DA.GetDataList(1, values)) return;
 
-            for (int i = 0; i < userText.Count; i++)
+            if (keys.Count != values.Count)
             {
-                string key = userText.GetKey(i);
-                keys.Add(key);
-                values.Add(userText.GetValue(key));
-                if (key.Contains("\\"))
-                {
-                    string section = key.Split('\\')[0];
-                    if (!sections.Contains(section))
-                    {
-                        sections.Add(section);
-                    }
-                }
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Key and Value lists must be the same length.");
+                return;
             }
 
-            DA.SetDataList(0, keys);
-            DA.SetDataList(1, values);
-            DA.SetDataList(2, sections);
+            DA.GetData(2, ref set);
+            if (!set) return;
+
+            RhinoDoc document = RhinoDoc.ActiveDoc;
+            StringTable userData = document.Strings;
+
+            if (set)
+            {
+                for (int i = 0; i < keys.Count; i++)
+                {
+                    var key = keys[i];
+                    var value = values[i];
+                    userData.SetString(key, value);
+                }
+            }
         }
 
         /// <summary>
@@ -83,7 +81,7 @@ namespace Raven.Components
             {
                 //You can add image files to your project resources and access them like this:
                 // return Resources.IconForThisComponent;
-                return Resources.GetAllUserText_24;
+                return Resources.UserTxtKeyValueSet_24;
             }
         }
 
@@ -92,7 +90,7 @@ namespace Raven.Components
         /// </summary>
         public override Guid ComponentGuid
         {
-            get { return new Guid("59E30A31-4D2E-4B9D-9D54-64CC7114F987"); }
+            get { return new Guid("9DA54B1B-2389-4CD6-8895-E389DE8531E4"); }
         }
 
         public override GH_Exposure Exposure

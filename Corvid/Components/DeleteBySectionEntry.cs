@@ -8,7 +8,7 @@ using Rhino.DocObjects.Tables;
 using System.Linq;
 using Eto.Forms;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
     public class DeleteBySectionEntry : GH_Component
     {
@@ -18,7 +18,7 @@ namespace Raven.Components
         public DeleteBySectionEntry()
           : base("Delete By Section/Entry", "DelSec",
               "Delete a user text item by specifying its section and/or entry",
-              "Rhino", "Raven")
+              "Rhino", "Corvid")
         {
         }
 

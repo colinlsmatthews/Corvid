@@ -13,7 +13,7 @@ using Newtonsoft.Json.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
     public class GetForumAvatar : GH_Component
     {
@@ -23,7 +23,7 @@ namespace Raven.Components
         public GetForumAvatar()
           : base("Forum Avatar", "Avatar",
               "Get any username avatar bitmap from the McNeel Discourse forum",
-              "Rhino", "Raven")
+              "Rhino", "Corvid")
         {
         }
 

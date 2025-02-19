@@ -3,11 +3,11 @@ using System.Drawing;
 using Grasshopper;
 using Grasshopper.Kernel;
 
-namespace Raven
+namespace Corvid
 {
-    public class RavenInfo : GH_AssemblyInfo
+    public class CorvidInfo : GH_AssemblyInfo
     {
-        public override string Name => "Raven";
+        public override string Name => "Corvid";
 
         //Return a 24x24 pixel bitmap to represent this GHA library.
         public override Bitmap Icon => null;

@@ -6,7 +6,7 @@ using Grasshopper;
 using Grasshopper.Kernel;
 using Rhino.Geometry;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
     public class RhinoVersion : GH_Component
     {
@@ -16,7 +16,7 @@ namespace Raven.Components
         public RhinoVersion()
           : base("Rhino Version", "Version",
             "Gets the version of the current Rhino installation.",
-            "Rhino", "Raven")
+            "Rhino", "Corvid")
         {
         }
 

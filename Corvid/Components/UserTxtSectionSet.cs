@@ -6,7 +6,7 @@ using Rhino;
 using Rhino.Geometry;
 using Rhino.DocObjects.Tables;
 
-namespace Raven.Components
+namespace Corvid.Components
 {
     public class UserTxtSectionSet : GH_Component
     {
@@ -18,7 +18,7 @@ namespace Raven.Components
               "Set document user text by section, entry, and value." +
                 "\nUser text key/value pairs can be grouped into sections" +
                 "\nwith the format \"<section>\\<entry>:<value>\".",
-              "Rhino", "Raven")
+              "Rhino", "Corvid")
         {
         }
 
