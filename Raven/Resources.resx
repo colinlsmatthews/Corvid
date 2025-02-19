@@ -121,4 +121,46 @@
   <data name="Avatar_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Avatar_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DeleteByKey_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+	<value>Resources\DeleteByKey_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeleteBySectionEntry_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+	<value>Resources\DeleteBySectionEntry_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GetAllUserText_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\GetAllUserText_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GetForumAvatar_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\GetForumAvatar_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RhinoFileInfo_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\RhinoFileInfo_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RhinoLicenseInfo_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\RhinoLicenseInfo_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RhinoUserInfo_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\RhinoUserInfo_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RhinoVersion_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\RhinoVersion_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserTxtExport_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UserTxtExport_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserTxtImport_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UserTxtImport_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserTxtKeyValueGet_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UserTxtKeyValueGet_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserTxtKeyValueSet_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UserTxtKeyValueSet_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserTxtSectionGet_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UserTxtSectionGet_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserTxtSectionSet_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UserTxtSectionSet_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
